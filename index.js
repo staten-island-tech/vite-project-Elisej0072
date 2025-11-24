@@ -23,10 +23,16 @@ const items = [
  "type": "water",
 },
 
-{"name": "",
- "image": "",
+{"name": "Volcarona",
+ "image": "https://static.tcgcollector.com/content/images/14/f9/4f/14f94f325929cfe5d5f58c32e0ae898d9b6be55e2ac5b2a77a9adcdeb973a58f.webp",
  "alt": "",
  "type": "",
+},
+
+{"name": "Leafeon VSTAR",
+ "image": "https://static.tcgcollector.com/content/images/be/f8/11/bef811b5e0e328ab5f534c9b5c7f69b58bc93f8eb6e805d6109cd8150638ffc9.jpg",
+ "alt": "leafeon",
+ "type": "grass",
 },
 
 {"name": "",
@@ -35,16 +41,10 @@ const items = [
  "type": "",
 },
 
-{"name": "",
- "image": "",
- "alt": "",
- "type": "",
-},
-
-{"name": "",
- "image": "",
- "alt": "",
- "type": "",
+{"name": "Suicune V",
+ "image": "https://static.tcgcollector.com/content/images/f5/db/98/f5db9853aff6ad5ec5e487e14d9659974cd88cb4a8860807ce9f45520027311b.jpg",
+ "alt": "suicune",
+ "type": "water",
 },
 
 ]
