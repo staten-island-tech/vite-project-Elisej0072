@@ -1,3 +1,4 @@
+
 const items = [
 {"name": "Hisuian Zoroark VSTAR",
  "image": "https://static.tcgcollector.com/content/images/f8/c6/a9/f8c6a9d722cd84cb7ecebbf1fe66e6414026326621aeaa94588c89ec260b7dc5.jpg",
@@ -83,10 +84,10 @@ const items = [
  "type": "water",
 },
 
-{"name": "",
+{"name": "Sprigatito",
  "image": "https://static.tcgcollector.com/content/images/c4/c7/58/c4c758b786cb9facb5e2a362541a392013ec2d0cad2d88cb12b54dd50461f17b.jpg",
- "alt": "",
- "type": "",
+ "alt": "sprigatito.png",
+ "type": "grass",
 },
 
 {"name": "Reshiram ex",
@@ -124,12 +125,10 @@ const items = [
 const collection= []
 function inject(item) {
 const container = document.querySelector(".container"); 
-/* query the container using adjacent html push card into container */
-
 const html = `<div class ="card" data-title= "${item.name}" >
   <h2 class="card__heading">${item.name}</h2><img src="${item.image}">
-  <h3> $${item.type} </h3>
-  <button class="buy" data-title="${item.name}"> Add to Collection</button>
+  <h3> ${item.type} </h3>
+  <button class="" data-title="${item.name}"> Add to Collection</button>
 </div>`
 container.insertAdjacentHTML('afterbegin', html);
 }
@@ -138,17 +137,16 @@ items.forEach((item) => inject(item))
 
 function addToCart() {
   const buttons = document.querySelectorAll("button");
-  //create array if we need more than forEach
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
+   
+   
     const product = event.target.closest(".card").getAttribute("data-title")
     const collected = items.find((item) => item.name === collected)
    console.log(addtoCollection)
     injecttocart(collected,btnArray);
   }))
 
-  //find the item in the array
-  //take that object and push into cart
 }
 addToCart();
 
