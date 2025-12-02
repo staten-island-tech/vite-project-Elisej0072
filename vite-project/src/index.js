@@ -178,9 +178,8 @@ const container = document.querySelector(".container");
 const html = `<div class ="card" data-title= "${item.name}" >
   <h2 class="card__heading">${item.name}</h2><img src="${item.image}">
   <h3> $${item.price} </h3>
+  <h4> ${item.type} </h4>
   <button class="buy" data-title="${item.name}"> Add to Collection </button>
-  <h3> ${item.type} </h3>
-  <button class="" data-title="$${item.name}"> Add to Collection </button>
 </div>`
 container.insertAdjacentHTML('afterbegin', html);
 }
