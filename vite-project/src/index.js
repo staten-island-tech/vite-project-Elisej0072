@@ -180,14 +180,17 @@ const html = `<div class ="card" data-title= "${item.name}" >
   <h3> $${item.price} </h3>
   <h4> ${item.type} </h4>
   <button class="buy" data-title="${item.name}"> Add to Collection </button>
+  <button class="buy" data-title="${item.name}"> In Collection </button>
 </div>`
 container.insertAdjacentHTML('afterbegin', html);
 }
 
 items.forEach((item) => inject(item))
 
-function addToCollection() {
-  const buttons = document.querySelectorAll("button");
+yourCollection();
+
+function yourCollection() {
+  const buttons = document.querySelectorAll("collected");
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
     const product = event.target.closest(".card").getAttribute("data-title")
@@ -197,23 +200,56 @@ function addToCollection() {
   }))
 }
 
-function injectToCollection(item,btnArray) {
-const cartItems = document.querySelector(".cart_items"); 
+injecttoyourCollection();
+
+function injecttoyourCollection(item,btnArray) {
+const collectedItems = document.querySelector(".collected_items"); 
 btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
   const title = event.target.dataset.title;
   const item = items.find(item => item.name === name);
 }));
-const html = `<div class ="cart_items">
+const html = `<div class ="collected_items">
+  <h2 class="card__heading">${item.name}</h2>
+  <img src="${item.image}">
+  <h3> $${item.price}</h3>
+</div>`
+collectedItems.insertAdjacentHTML('afterbegin', html);
+}
+
+addtoCollection();
+
+function addtoCollection() {
+  const buttons = document.querySelectorAll("addtocollection");
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
+    const product = event.target.closest(".card").getAttribute("data-title")
+    const purchased= items.find((item) => item.name === product)
+    console.log(purchased)
+    injecttocart(purchased,btnArray);
+  }))
+}
+
+injecttoaddtoCollection();
+
+function injecttoaddtoCollection(item,btnArray) {
+const cart = document.querySelector(".cart_items"); 
+btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
+  const title = event.target.dataset.title;
+  const item = items.find(item => item.name === name);
+}));
+const html = `<div class ="collected_items">
   <h2 class="card__heading">${item.name}</h2>
   <h3> $${item.price}</h3>
 </div>`
-cartItems.insertAdjacentHTML('afterbegin', html);
+collectedItems.insertAdjacentHTML('afterbegin', html);
 }
 
-function filterItems(name) {
-  const display = document.querySelector(".filter");
-  display.innerHTML = ""; 
-  const filterItems = items.filter((item) => item.name === name);
-  console.log(filterItems)
- 
-}
+
+
+
+// function filterItems(name) {
+//   const display = document.querySelector(".filter");
+//   display.innerHTML = ""; 
+//   const filterItems = items.filter((item) => item.name === name);
+//   console.log(filterItems)
+// }
