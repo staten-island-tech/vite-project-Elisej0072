@@ -172,6 +172,7 @@ const items = [
 
 ]
 
+
 const collection= []
 function inject(item) {
 const container = document.querySelector(".container"); 
@@ -194,23 +195,23 @@ function yourCollection() {
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
     const product = event.target.closest(".card").getAttribute("data-title")
-    const purchased= items.find((item) => item.name === product)
-    console.log(purchased)
-    injecttocart(purchased,btnArray);
+    const collected = items.find((item) => item.name === product)
+    console.log(collected)
+    injecttocollection(collected,btnArray);
   }))
 }
 
 injecttoyourCollection();
 
-function injecttoyourCollection(item,btnArray) {
+function injecttoyourCollection(item, collection = []) {
 const collectedItems = document.querySelector(".collected_items"); 
-btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
+collection.forEach((btn) => btn.addEventListener("click", function(event) {
   const title = event.target.dataset.title;
   const item = items.find(item => item.name === name);
 }));
 const html = `<div class ="collected_items">
-  <h2 class="card__heading">${item.name}</h2>
-  <img src="${item.image}">
+  <h2 class="card__heading">{item.name}</h2>
+  <img src= "${item.image}" >
   <h3> $${item.price}</h3>
 </div>`
 collectedItems.insertAdjacentHTML('afterbegin', html);
@@ -221,7 +222,7 @@ addtoCollection();
 function addtoCollection() {
   const buttons = document.querySelectorAll("addtocollection");
   const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
+  addCollect.forEach((btn) => btn.addEventListener("click", function(event) {
     const product = event.target.closest(".card").getAttribute("data-title")
     const purchased= items.find((item) => item.name === product)
     console.log(purchased)
@@ -243,8 +244,6 @@ const html = `<div class ="collected_items">
 </div>`
 collectedItems.insertAdjacentHTML('afterbegin', html);
 }
-
-
 
 
 // function filterItems(name) {
