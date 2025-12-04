@@ -210,41 +210,40 @@ collection.forEach((btn) => btn.addEventListener("click", function(event) {
   const item = items.find(item => item.name === name);
 }));
 const html = `<div class ="collected_items">
-  <h2 class="card__heading">{item.name}</h2>
-  <img src= "${item.image}" >
+  <h2 class="card__heading"> ${item.name} </h2>
   <h3> $${item.price}</h3>
 </div>`
-collectedItems.insertAdjacentHTML('afterbegin', html);
+cartItems.insertAdjacentHTML('afterbegin', html);
 }
 
 addtoCollection();
 
 function addtoCollection() {
-  const buttons = document.querySelectorAll("addtocollection");
+  const buttons = document.querySelectorAll("AddtoCollection");
   const btnArray = Array.from(buttons);
-  addCollect.forEach((btn) => btn.addEventListener("click", function(event) {
+  btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
     const product = event.target.closest(".card").getAttribute("data-title")
-    const purchased= items.find((item) => item.name === product)
-    console.log(purchased)
-    injecttocart(purchased,btnArray);
+    const addtoCollection = items.find((item) => item.name === product)
+    console.log(addtoCollection)
+    injecttoaddtoCollection(purchased,btnArray);
   }))
 }
 
-injecttoaddtoCollection();
+injecttoCart();
 
-function injecttoaddtoCollection(item,btnArray) {
-const cart = document.querySelector(".cart_items"); 
-btnArray.forEach((btn) => btn.addEventListener("click", function(event) {
+function injecttoCart(item) {
+const cartItems = document.querySelector(".cart_items"); 
+cart.forEach((btn) => btn.addEventListener("click", function(event) {
   const title = event.target.dataset.title;
   const item = items.find(item => item.name === name);
 }));
-const html = `<div class ="collected_items">
-  <h2 class="card__heading">${item.name}</h2>
+
+const html = `<div class ="addtocollection">
+    <h2 class="card__heading"> ${item.name} </h2>
   <h3> $${item.price}</h3>
 </div>`
-collectedItems.insertAdjacentHTML('afterbegin', html);
+cartItems.insertAdjacentHTML('afterbegin', html);
 }
-
 
 // function filterItems(name) {
 //   const display = document.querySelector(".filter");
