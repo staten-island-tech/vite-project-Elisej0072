@@ -1,5 +1,4 @@
 body {
-background-color:hsl(0, 100%, 100%);
 font-family: Archivo;
 text-align: center;
 margin: 0;
@@ -36,9 +35,9 @@ img {
 }
 
 button{
-  width: 85px;
-  padding: 5px;
-  border: solid 2px;
+  width: 100px;
+  padding: 7px;
+  border: solid 3px;
 }
 
 .purchase{
