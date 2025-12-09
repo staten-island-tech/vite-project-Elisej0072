@@ -200,25 +200,21 @@ function yourCollection() {
 }
 
 injectToCollection();
-function injectToCollection(items, collection) {
-
-
-
-  
-const collectionItems = document.querySelector(".collection_items"); }
+function injectToCollection(item) {
+const collectionItems = document.querySelector(".collection_items"); 
 collection.forEach((btn) => btn.addEventListener("click", function(event) {
   const title = event.target.dataset.title;
-  const item = items.find(item => item.name === name);
+  const item = items.find(item => item.name === product);
 }));
 const html = `<div class = "your collection" >
-  <h2 class= "card_heading"> ${items.name} </h2>
-  <h3> $${items.price}</h3>
+  <h2 class= "card_heading"> ${item.name} </h2>
+  <h3> $${item.price}</h3>
+  <h4> ${item.image}</h4>
 </div>`
 collectionItems.insertAdjacentHTML('afterbegin', html);
-
+}
 
 addToWishlist();
-
 function addToWishlist() {
   const buttons = document.querySelectorAll("AddtoWishlist");
   const btnArray = Array.from(buttons);
@@ -230,16 +226,15 @@ function addToWishlist() {
 }
 
 injectToWishlist();
-function injectToWishlist(item, wishlist =[]) {
-const wishlistItems = document.querySelector(".cart_items"); 
+function injectToWishlist(item ) {
+const wishlistItems = document.querySelector(".wishlist_items"); 
 wishlist.forEach((btn) => btn.addEventListener("click", function(event) {
   const title = event.target.dataset.title;
   const item = items.find(item => item.name === name);
 }));
-
-const html = `<div class ="addtocollection">
-    <h2 class="card_heading"> ${items.name} </h2>
-  <h3> $${items.price}</h3>
+const html = `<div class ="wishlist">
+    <h2 class="card_heading"> ${item.name} </h2>
+  <h3> $${item.price}</h3>
 </div>`
 wishlistItems.insertAdjacentHTML('afterbegin', html);
 }
