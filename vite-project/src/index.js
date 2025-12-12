@@ -163,40 +163,34 @@ items.forEach((item) => inject(item))
 
 
 function yourCollection() {
-  const buttons = document.querySelectorAll("add");
+  const buttons = document.querySelectorAll(".add");
   buttons.forEach((btn) => btn.addEventListener("click", function(event) {
     const product = event.target.closest(".card").getAttribute("data-title")
-    const collected = items.find((item) => item.name === product)
-      console.log(collected)
+    const item = items.find((item) => item.name === product)
     const container = document.querySelector('.yourcollection');
-    collected.forEach(item => {
-      const html = `<div class = "yourcollection" >
-      <h2 class= "card_heading"> ${item.name} </h2>
-      <h3> $${item.price}</h3>
-      <h4> ${item.image}</h4>
-    </div>`
-      container.insertAdjacentHTML('afterbegin', html)
-    })
+    const html = `<div class = "yourcollection" >
+      <h3 class= "card_heading"> ${item.name} </h3>
+      <img src='${item.image}'>
+      <h4> $${item.price}</h4>
+      </div>`
+    container.insertAdjacentHTML('afterbegin', html)
   }))
 }
 yourCollection();
 
 
 function addToWishlist() {
-  const buttons = document.querySelectorAll("buy");
+  const buttons = document.querySelectorAll(".buy");
   buttons.forEach((btn) => btn.addEventListener("click", function(event) {
     const product = event.target.closest(".card").getAttribute("data-title")
-    const wishlisted = items.find((item) => item.name === product)
-      console.log(wishlisted)
+    const item = items.find((item) => item.name === product)
     const cart = document.querySelector('.wishlist');
-     wishlisted.forEach(item => {
       const html = `<div class = "wishlist" >
       <h2 class= "card_heading"> ${item.name} </h2>
+      <img src='${item.image}'>
       <h3> $${item.price}</h3>
-      <h4> ${item.image}</h4>
-    </div>`
-      cart.insertAdjacentHTML('afterbegin', html)
-    })
+      </div>`
+    cart.insertAdjacentHTML('afterbegin', html)
   }))
 }
 addToWishlist();
