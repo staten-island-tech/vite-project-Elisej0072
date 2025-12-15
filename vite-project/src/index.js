@@ -1,213 +1,359 @@
 import './style.css'
 
+
 const items = [
 {"name": "Hisuian Zoroark VSTAR",
- "image": "https://static.tcgcollector.com/content/images/f8/c6/a9/f8c6a9d722cd84cb7ecebbf1fe66e6414026326621aeaa94588c89ec260b7dc5.jpg",
- "alt": "zoroark.png",
- "price": 26.73,
+"image": "https://static.tcgcollector.com/content/images/f8/c6/a9/f8c6a9d722cd84cb7ecebbf1fe66e6414026326621aeaa94588c89ec260b7dc5.jpg",
+"alt": "zoroark.png",
+"price": 26.73,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Deoxys VSTAR",
- "image": "https://static.tcgcollector.com/content/images/ea/d1/cc/ead1ccbf859cf4c66f2e4f94dc23883b4a6fd45010c13d7d0c7c4cbaab0bfd11.jpg",
- "alt": "deoxys.png",
- "price": 27.35,
+"image": "https://static.tcgcollector.com/content/images/ea/d1/cc/ead1ccbf859cf4c66f2e4f94dc23883b4a6fd45010c13d7d0c7c4cbaab0bfd11.jpg",
+"alt": "deoxys.png",
+"price": 27.35,
+"statusc":false,
+"statusw":false,
 },
 
+
 {"name": "Zeraora VMAX",
- "image": "https://static.tcgcollector.com/content/images/2e/37/e3/2e37e32ffa4bc272558d93f231212fef1211bc7ea7c897d97219fa34f4a60cd2.jpg",
- "alt": "zeraora.png",
- "price": 16.17,
+"image": "https://static.tcgcollector.com/content/images/2e/37/e3/2e37e32ffa4bc272558d93f231212fef1211bc7ea7c897d97219fa34f4a60cd2.jpg",
+"alt": "zeraora.png",
+"price": 16.17,
+"statusc":false,
+"statusw":false,
 },
+
+
 
 
 {"name": "Volcarona",
- "image": "https://static.tcgcollector.com/content/images/14/f9/4f/14f94f325929cfe5d5f58c32e0ae898d9b6be55e2ac5b2a77a9adcdeb973a58f.webp",
- "alt": "volcarona.png", 
- "price": 35.38,
+"image": "https://static.tcgcollector.com/content/images/14/f9/4f/14f94f325929cfe5d5f58c32e0ae898d9b6be55e2ac5b2a77a9adcdeb973a58f.webp",
+"alt": "volcarona.png",
+"price": 35.38,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Leafeon VSTAR",
- "image": "https://static.tcgcollector.com/content/images/be/f8/11/bef811b5e0e328ab5f534c9b5c7f69b58bc93f8eb6e805d6109cd8150638ffc9.jpg",
- "alt": "leafeon.png",
- "price": 54.92,
+"image": "https://static.tcgcollector.com/content/images/be/f8/11/bef811b5e0e328ab5f534c9b5c7f69b58bc93f8eb6e805d6109cd8150638ffc9.jpg",
+"alt": "leafeon.png",
+"price": 54.92,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Braviary",
- "image": "https://static.tcgcollector.com/content/images/07/e0/0f/07e00fc23d78161172e81a9263f06940f9e70237cc239864f6c3713f10780a4f.webp",
- "alt": "braviary.png",
- "price": 6.68,
+"image": "https://static.tcgcollector.com/content/images/07/e0/0f/07e00fc23d78161172e81a9263f06940f9e70237cc239864f6c3713f10780a4f.webp",
+"alt": "braviary.png",
+"price": 6.68,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Dachsbun ex",
- "image": "https://static.tcgcollector.com/content/images/4b/7e/f3/4b7ef34b95cfd3402c955b72e3fcb6eede62d96ccf9c66a5c8ba2a3322e06497.jpg",
- "alt": "dachsbun.png",
- "price": 32.28,
+"image": "https://static.tcgcollector.com/content/images/4b/7e/f3/4b7ef34b95cfd3402c955b72e3fcb6eede62d96ccf9c66a5c8ba2a3322e06497.jpg",
+"alt": "dachsbun.png",
+"price": 32.28,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Zekrom ex",
- "image": "https://static.tcgcollector.com/content/images/e5/db/a1/e5dba1a47e7e06df5b012543381a07659ba59ee69e3134b4475c8fd5e2250e37.webp",
- "alt": "zekrom.png",
- "price": 230.00,
+"image": "https://static.tcgcollector.com/content/images/e5/db/a1/e5dba1a47e7e06df5b012543381a07659ba59ee69e3134b4475c8fd5e2250e37.webp",
+"alt": "zekrom.png",
+"price": 230.00,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Chandelure",
- "image": "https://static.tcgcollector.com/content/images/80/8f/8c/808f8ca369dead9d0d75f05f7933b8ea4e16c9a23b51109bf42adba55f8f2981.webp",
- "alt": "chandelure.png",
- "price": 41.64,
+"image": "https://static.tcgcollector.com/content/images/80/8f/8c/808f8ca369dead9d0d75f05f7933b8ea4e16c9a23b51109bf42adba55f8f2981.webp",
+"alt": "chandelure.png",
+"price": 41.64,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Liepard",
- "image": "https://static.tcgcollector.com/content/images/4a/25/59/4a25599fbe74c8f3eccda55d5ab38df04c7807283c7c316b3756c35f3294c48c.webp",
- "alt": "liepard.png",
- "price": 21.75,
+"image": "https://static.tcgcollector.com/content/images/4a/25/59/4a25599fbe74c8f3eccda55d5ab38df04c7807283c7c316b3756c35f3294c48c.webp",
+"alt": "liepard.png",
+"price": 21.75,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Zamazenta",
- "image": "https://static.tcgcollector.com/content/images/60/65/1d/60651db5c982948c074ae596125882ddc6839c854c4155f03f2345e7d7c516c2.webp",
- "alt": "zamazenta.png",
- "price": 3.64,
+"image": "https://static.tcgcollector.com/content/images/60/65/1d/60651db5c982948c074ae596125882ddc6839c854c4155f03f2345e7d7c516c2.webp",
+"alt": "zamazenta.png",
+"price": 3.64,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Glaceon VSTAR",
- "image": "https://static.tcgcollector.com/content/images/28/05/56/2805562b816ffce1887565858a2a8b71186ac3bb0cfa214a4d7a0eaa37e7788c.jpg",
- "alt": "glaceon.png",
- "price": 47.40
+"image": "https://static.tcgcollector.com/content/images/28/05/56/2805562b816ffce1887565858a2a8b71186ac3bb0cfa214a4d7a0eaa37e7788c.jpg",
+"alt": "glaceon.png",
+"price": 47.40,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Houndoom",
- "image": "https://static.tcgcollector.com/content/images/5b/51/b5/5b51b52e778c9b07e1b79d3314210e0e57c68a0888a1752643cdffc0c75f2d55.jpg",
- "alt": "houndoom.png",
- "price": 35.84,
+"image": "https://static.tcgcollector.com/content/images/5b/51/b5/5b51b52e778c9b07e1b79d3314210e0e57c68a0888a1752643cdffc0c75f2d55.jpg",
+"alt": "houndoom.png",
+"price": 35.84,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Latios",
- "image": "https://static.tcgcollector.com/content/images/fa/e7/6d/fae76d64f7c54a59f13c8cce88990b513aabf8cb84096e9fa478c43d5d6c0389.webp",
- "alt": "latios.png",
- "price": 22.55,
+"image": "https://static.tcgcollector.com/content/images/fa/e7/6d/fae76d64f7c54a59f13c8cce88990b513aabf8cb84096e9fa478c43d5d6c0389.webp",
+"alt": "latios.png",
+"price": 22.55,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Suicune V",
- "image": "https://static.tcgcollector.com/content/images/f5/db/98/f5db9853aff6ad5ec5e487e14d9659974cd88cb4a8860807ce9f45520027311b.jpg",
- "alt": "suicune.png",
- "price": 39.99,
+"image": "https://static.tcgcollector.com/content/images/f5/db/98/f5db9853aff6ad5ec5e487e14d9659974cd88cb4a8860807ce9f45520027311b.jpg",
+"alt": "suicune.png",
+"price": 39.99,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Umbreon ex <tera> ",
- "image": "https://static.tcgcollector.com/content/images/17/95/72/179572ac9a5aafcacbfa0af9bec335dd0926b2bc0c552fbb81056c9ea9fa4d89.webp",
- "alt": "umbreon.png",
- "price": 1111.00,
+"image": "https://static.tcgcollector.com/content/images/17/95/72/179572ac9a5aafcacbfa0af9bec335dd0926b2bc0c552fbb81056c9ea9fa4d89.webp",
+"alt": "umbreon.png",
+"price": 1111.00,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Sprigatito",
- "image": "https://static.tcgcollector.com/content/images/c4/c7/58/c4c758b786cb9facb5e2a362541a392013ec2d0cad2d88cb12b54dd50461f17b.jpg",
- "alt": "sprigatito.png",
- "price": 24.26
+"image": "https://static.tcgcollector.com/content/images/c4/c7/58/c4c758b786cb9facb5e2a362541a392013ec2d0cad2d88cb12b54dd50461f17b.jpg",
+"alt": "sprigatito.png",
+"price": 24.26,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Reshiram ex",
- "image": "https://static.tcgcollector.com/content/images/c9/db/73/c9db735f72bff28a810bf5feeb92c9636fab1de3b7e0f6f74c3b2ee2d952ed4d.webp",
- "alt": "reshiram.png",
- "price": 188.00,
+"image": "https://static.tcgcollector.com/content/images/c9/db/73/c9db735f72bff28a810bf5feeb92c9636fab1de3b7e0f6f74c3b2ee2d952ed4d.webp",
+"alt": "reshiram.png",
+"price": 188.00,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Aegislash",
- "image": "https://static.tcgcollector.com/content/images/a3/ee/34/a3ee349883c0672a2d84051f6ad6e30149b3e2519c7f6c96f88b4f994f111a18.jpg",
- "alt": "aegislash.png",
- "price": 5.84,
+"image": "https://static.tcgcollector.com/content/images/a3/ee/34/a3ee349883c0672a2d84051f6ad6e30149b3e2519c7f6c96f88b4f994f111a18.jpg",
+"alt": "aegislash.png",
+"price": 5.84,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Ceruledge ex <tera>",
- "image": "https://static.tcgcollector.com/content/images/3e/da/8a/3eda8afdf9e5f99852f95669bf98582263cad38f27d3097ef11064d6108dfd5e.webp",
- "alt": "ceruledge.png",
- "price": 111.00,
+"image": "https://static.tcgcollector.com/content/images/3e/da/8a/3eda8afdf9e5f99852f95669bf98582263cad38f27d3097ef11064d6108dfd5e.webp",
+"alt": "ceruledge.png",
+"price": 111.00,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Koraidon ex",
- "image": "https://static.tcgcollector.com/content/images/3d/0a/69/3d0a692ecd4f7871917775931a59c6d1297a21a250797b87302f26eed7f56e5e.jpg",
- "alt": "koraidon.png",
- "price": 14.99,
+"image": "https://static.tcgcollector.com/content/images/3d/0a/69/3d0a692ecd4f7871917775931a59c6d1297a21a250797b87302f26eed7f56e5e.jpg",
+"alt": "koraidon.png",
+"price": 14.99,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Reuniclus",
- "image": "https://static.tcgcollector.com/content/images/17/eb/44/17eb449adeb55ca3e976f06e3944b5978142543f8fe0b0fbeb2abd1d5dd72454.jpg",
- "alt": "reuniclus.png",
- "price": 8.40,
+"image": "https://static.tcgcollector.com/content/images/17/eb/44/17eb449adeb55ca3e976f06e3944b5978142543f8fe0b0fbeb2abd1d5dd72454.jpg",
+"alt": "reuniclus.png",
+"price": 8.40,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Armarouge",
- "image": "https://static.tcgcollector.com/content/images/8d/d3/d9/8dd3d9f541bee645197569f39d531798070207dcf64835fde7b9ffacbf6a98ce.jpg",
- "alt": "armarouge.png",
- "price": 12.90,
+"image": "https://static.tcgcollector.com/content/images/8d/d3/d9/8dd3d9f541bee645197569f39d531798070207dcf64835fde7b9ffacbf6a98ce.jpg",
+"alt": "armarouge.png",
+"price": 12.90,
+"statusc":false,
+"statusw":false,
 },
+
 
 {"name": "Noibat",
- "image": "https://static.tcgcollector.com/content/images/41/23/a0/4123a04740d389629cddcb69bf54338d196ccafc3597caf56c66fab4b8c946b0.webp",
- "alt": "noibat.png",
- "price": 3.40,
+"image": "https://static.tcgcollector.com/content/images/41/23/a0/4123a04740d389629cddcb69bf54338d196ccafc3597caf56c66fab4b8c946b0.webp",
+"alt": "noibat.png",
+"price": 3.40,
+"statusc":false,
+"statusw":false,
 },
-
 ]
 
 
+
+
 function inject(item) {
-const container = document.querySelector(".container"); 
-const html = `<div class ="card" data-title= "${item.name}" >
-  <h2 class="card__heading">${item.name}</h2> <img src="${item.image}">
-  <h3> $${item.price} </h3>
-  <button class="buy" data-title="${item.name}"> Add to Wishlist </button>
-  <button class="add" data-title="${item.name}"> In Collection </button>
+const container = document.querySelector(".container");
+const html = 
+`<div class ="card" data-title= "${item.name}" >
+ <h3 class="card__heading">${item.name}</h3> <img src="${item.image}">
+ <h4> $${item.price} </h4>
+ <button class="buy" data-title="${item.name}"> Add to Wishlist </button>
+ <button class="add" data-title="${item.name}"> In Collection </button>
 </div>`
 container.insertAdjacentHTML('afterbegin', html);
 }
 items.forEach((item) => inject(item))
 
 
+
+
 function yourCollection() {
-  const buttons = document.querySelectorAll(".add");
-  buttons.forEach((btn) => btn.addEventListener("click", function(event) {
-    const product = event.target.closest(".card").getAttribute("data-title")
-    const item = items.find((item) => item.name === product)
-    const container = document.querySelector('.yourcollection');
-    const html = `<div class = "yourcollection" >
-      <h3 class= "card_heading"> ${item.name} </h3>
-      <img src='${item.image}'>
-      <h4> $${item.price}</h4>
-      </div>`
-    container.insertAdjacentHTML('afterbegin', html)
-  }))
+ const buttons = document.querySelectorAll(".add");
+ buttons.forEach((btn) => btn.addEventListener("click", function(event) {
+   const product = event.target.closest(".card").getAttribute("data-title")
+   const item = items.find((item) => item.name === product)
+   const container = document.querySelector('.yourcollection');
+   const html = 
+     `<div class = "yourcollection" >
+     <h3 class= "card_heading"> ${item.name} </h3>
+     <img src='${item.image}'>
+     <h4> $${item.price}</h4>
+     </div>`
+   container.insertAdjacentHTML('afterbegin', html)
+ }))
 }
 yourCollection();
 
 
 function addToWishlist() {
-  const buttons = document.querySelectorAll(".buy");
-  buttons.forEach((btn) => btn.addEventListener("click", function(event) {
-    const product = event.target.closest(".card").getAttribute("data-title")
-    const item = items.find((item) => item.name === product)
-    const cart = document.querySelector('.wishlist');
-      const html = `<div class = "wishlist" >
-      <h2 class= "card_heading"> ${item.name} </h2>
-      <img src='${item.image}'>
-      <h3> $${item.price}</h3>
-      </div>`
-    cart.insertAdjacentHTML('afterbegin', html)
-  }))
+ const buttons = document.querySelectorAll(".buy");
+ buttons.forEach((btn) => btn.addEventListener("click", function(event) {
+   const product = event.target.closest(".card").getAttribute("data-title")
+   const item = items.find((item) => item.name === product)
+   const cart = document.querySelector('.wishlist');
+     const html = 
+     `<div class = "wishlist" >
+     <h3 class= "card_heading"> ${item.name} </h3>
+     <img src='${item.image}'>
+     <h4> $${item.price}</h4>
+     </div>`
+   cart.insertAdjacentHTML('afterbegin', html)
+
+ }))
 }
 addToWishlist();
 
 
-/* function injectToWishlist(item ) {
-const wishlistItems = document.querySelector(".wishlist_items"); 
-wishlist.forEach((btn) => btn.addEventListener("click", function(event) {
-  const title = event.target.dataset.title;
-  const item = items.find(item => item.name === name);
-}));
-const html = `<div class ="wishlist">
-    <h2 class="card_heading"> ${item.name} </h2>
-  <h3> $${item.price}</h3>
-</div>`
-wishlistItems.insertAdjacentHTML('afterbegin', html);
-} */
+function filterItems(collected, wishlisted) {
+  let item = "default"
+if(item === collected) {
+ console.log("collected");
+ const item = (item.statusc = true);
+} else {
+ console.log("default");
+ const item = (item.statusc = false);
+}
+if(item === wishlisted) {
+ console.log("wishlisted");
+ const item = (item.statusw = true);
+ } else {
+ console.log("default");
+ const item = (item.statusw = false);
+}
+}
+filterItems();
+
+
+function filterByCollection() {
+ const buttons = document.querySelectorAll(".filtercollection");
+ buttons.forEach((btn) => btn.addEventListener("click", function(event) {
+   const product = event.target.closest(".card").getAttribute("data-title")
+   const item = items.filter((item) => item.statusc === true)
+   const filterc = document.querySelector('.filterc');
+     const html = `<div class = "filterwishlist" >
+     <h3 class= "card_heading"> ${item.name} </h3>
+     <img src='${item.image}'>
+     <h4> $${item.price}</h4>
+     </div>`
+   filterc.insertAdjacentHTML('afterbegin', html)
+ }))
+}
+filterByCollection();
+
+
+function filterByWishlist() {
+ const buttons = document.querySelectorAll(".filterwishlist");
+ buttons.forEach((btn) => btn.addEventListener("click", function(event) {
+   const product = event.target.closest(".card").getAttribute("data-title")
+   const item = items.filter((item) => item.statusw === true)
+   const filterw = document.querySelector('.filterc');
+     const html = `<div class = "filtercollection" >
+     <h3 class= "card_heading"> ${item.name} </h3>
+     <img src='${item.image}'>
+     <h4> $${item.price}</h4>
+     </div>`
+   filterw.insertAdjacentHTML('afterbegin', html)
+ }))
+}
+filterByWishlist();
+
+// function filterItems(statusc) {
+//  const display = document.querySelector(".filter");
+//  display.innerHMTL = "";
+//  const filterItems = items.filter((item) => item.statusc === true);
+//  console.log(filterItems)
+//  const html = `<div class = "filtercollection" >
+//      <h2 class= "card_heading"> ${item.name} </h2>
+//      <img src='${item.image}'>
+//      <h3> $${item.price}</h3>
+//      </div>`
+// }
+
+
+// function filterItems(statusw) {
+//  const display = document.querySelector(".filter");
+//  display.innerHMTL = "";
+//  const filterItems = items.filter((item) => item.statusw === true);
+//  console.log(filterItems)
+//  const html = `<div class = "filterwishlist" >
+//      <h2 class= "card_heading"> ${item.name} </h2>
+//      <img src='${item.image}'>
+//      <h3> $${item.price}</h3>
+//      </div>`
+// }
+
 
 // function filterItems(name) {
 //   const display = document.querySelector(".filter");
