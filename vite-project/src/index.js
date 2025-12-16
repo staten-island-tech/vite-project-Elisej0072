@@ -252,6 +252,7 @@ function yourCollection() {
      <h4> $${item.price}</h4>
      </div>`
    container.insertAdjacentHTML('afterbegin', html)
+   item = "collected"
  }))
 }
 yourCollection();
@@ -270,7 +271,7 @@ function addToWishlist() {
      <h4> $${item.price}</h4>
      </div>`
    cart.insertAdjacentHTML('afterbegin', html)
-
+   item = "wishlisted"
  }))
 }
 addToWishlist();
@@ -278,19 +279,21 @@ addToWishlist();
 
 function filterItems(collected, wishlisted) {
   let item = "default"
+  
 if(item === collected) {
  console.log("collected");
- const item = (item.statusc = true);
+  item = (item.statusc = true);
 } else {
  console.log("default");
- const item = (item.statusc = false);
+  item = (items.statusc = false);
 }
 if(item === wishlisted) {
  console.log("wishlisted");
- const item = (item.statusw = true);
+  item = (item.statusw = true);
+
  } else {
  console.log("default");
- const item = (item.statusw = false);
+  item = (items.statusw = false);
 }
 }
 filterItems();
@@ -299,8 +302,8 @@ filterItems();
 function filterByCollection() {
  const buttons = document.querySelectorAll(".filtercollection");
  buttons.forEach((btn) => btn.addEventListener("click", function(event) {
-   const product = event.target.closest(".card").getAttribute("data-title")
-   const item = items.filter((item) => item.statusc === true)
+   const product = event.target.closest(".card")
+   const item = items.filter((item) => item.statusc === product)
    const filterc = document.querySelector('.filterc');
      const html = `<div class = "filterwishlist" >
      <h3 class= "card_heading"> ${item.name} </h3>
@@ -316,10 +319,10 @@ filterByCollection();
 function filterByWishlist() {
  const buttons = document.querySelectorAll(".filterwishlist");
  buttons.forEach((btn) => btn.addEventListener("click", function(event) {
-   const product = event.target.closest(".card").getAttribute("data-title")
-   const item = items.filter((item) => item.statusw === true)
+   const product = event.target.closest(".card")
+   const item = items.filter((item) => item.statusw === product)
    const filterw = document.querySelector('.filterc');
-     const html = `<div class = "filtercollection" >
+     const html = `<div class = "filtercollection">
      <h3 class= "card_heading"> ${item.name} </h3>
      <img src='${item.image}'>
      <h4> $${item.price}</h4>
@@ -352,12 +355,4 @@ filterByWishlist();
 //      <img src='${item.image}'>
 //      <h3> $${item.price}</h3>
 //      </div>`
-// }
-
-
-// function filterItems(name) {
-//   const display = document.querySelector(".filter");
-//   display.innerHTML = ""; 
-//   const filterItems = items.filter((item) => item.name === name);
-//   console.log(filterItems)
 // }
