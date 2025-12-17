@@ -16,6 +16,7 @@ box-sizing: border-box;
  justify-content: space-between;
  }
 
+
 .cart {
  display: flex;
  justify-items: space-between;
@@ -41,22 +42,6 @@ h4 {
   font-size: 20px;
 }
 
-
-
-
-.lightmode {
- body {
-   background-color: #ffffff;
-   color: #000000;
-   font-family: Arial, sans-serif;
-   transition: background-color 0.3s, color 0.3s;
-}
-}
-
-.darkmode {
- background-color: #121212;
- color: #ffffff
-}
 
 
 img {
