@@ -194,7 +194,7 @@ function yourCollection() {
    const product = event.target.closest(".card").getAttribute("data-title")
    const item = items.find((item) => item.name === product)
     collection.push(item)
-   console.log(collection)
+   console.log(collection); 
  }))
 }
 yourCollection();
@@ -206,13 +206,10 @@ function addToWishlist() {
    const product = event.target.closest(".card").getAttribute("data-title")
    const item = items.find((item) => item.name === product)
    wishlist.push(item)
-   console.log(wishList)
+   console.log(wishlist)
  }))
 }
 addToWishlist();
-
-
-
 
 
 function filterByCollection() {
@@ -243,6 +240,16 @@ console.log("test")
 
 }
 filterByWishlist();
+
+document.querySelector(".btn").addEventListener("click", function () {
+  if (document.body.classList.contains("light")) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+  } else {
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+  }
+});
 
 // function filterItems(statusc) {
 //  const display = document.querySelector(".filter");
