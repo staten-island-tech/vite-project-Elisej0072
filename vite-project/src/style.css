@@ -1,3 +1,4 @@
+
 body {
 font-family: Archivo;
 text-align: center;
@@ -26,6 +27,7 @@ box-sizing: border-box;
  flex-wrap: wrap;
  justify-content: space-between;
 }
+
 
 h2 {
   text-align: center;
